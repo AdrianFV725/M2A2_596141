@@ -3,10 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Torneo de Videojuegos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <h1 class="titulo">Registro de torneo de videojuegos</h1>
+        <form action="#" class="formulario" method="post">
+            <table class="tabla-formulario">
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="nombre">Nombre del jugador:</label></td>
+                    <td class="input-formulario"><input type="text" id="nombre" name="nombre" required minlength="3" maxlength="15"></td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="email">Correo:</label></td>
+                    <td class="input-formulario"><input type="email" id="email" name="email" required class="input-formulario"></td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="edad">Edad:</label></td>
+                    <td class="input-formulario"><input type="number" id="edad" name="edad" required min="12" max="40" class="input-formulario"></td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="nickname">Nickname:</label></td>
+                    <td class="input-formulario"><input type="text" id="nickname" name="nickname" pattern="[a-zA-Z0-9]+" title="Solo letras y números" class="input-formulario"></td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="categoria">Categoría:</label></td>
+                    <td class="input-formulario">
+                        <input type="radio" id="principiante" name="categoria" value="principiante" required>
+                        <label for="principiante">Principiante</label>
+                        <input type="radio" id="intermedio" name="categoria" value="intermedio" required>
+                        <label for="intermedio">Intermedio</label>
+                        <input type="radio" id="experto" name="categoria" value="experto" required>
+                        <label for="experto">Experto</label>
+                    </td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="juegos">Juegos favoritos:</label></td>
+                    <td class="input-formulario">
+                        <input type="checkbox" id="fifa" name="juegos" value="fifa">
+                        <label for="fifa">FIFA</label>
+                    
+                        <input type="checkbox" id="lol" name="juegos" value="lol">
+                        <label for="lol">LoL</label>
+
+                        <input type="checkbox" id="minecraft" name="juegos" value="minecraft">
+                        <label for="minecraft">Minecraft</label>
+                    </td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td class="etiqueta"><label for="fecha-inscripcion">Fecha inscripción:</label></td>
+                    <td class="input-formulario"><input type="date" id="fecha-inscripcion" name="fecha-inscripcion" min="2025-01-01" max="2025-12-31" required></td>
+                </tr>
+                <tr class="fila-formulario">
+                    <td colspan="2" class="botones">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Restablecer</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
     
 </body>
 </html>
